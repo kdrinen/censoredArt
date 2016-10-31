@@ -1,3 +1,48 @@
+$(function(){
+
+//Quote at Random
+  var quotes = [
+  'Censorship reflects a society that lacks confidence in itself. -Potter Stewart',
+
+  'There is a fine line between censorship, good taste, and moral responsibility. -Steven Spielberg',
+
+  'Censorship is saying: "I am the one who says the last sentence. Whatever you say, the conclusion is mine". -Ai Weiwei',
+
+  'Censorship is to art as lynching is to justice. -Henry Louis Gates',
+
+  'The first condition of progress is the removal of censorship. -George Bernard Shaw',
+
+  'Censorhip is the child of fear and the father of ignorance. -Laurie Halse Anderson',
+
+  'Beware those who are quick to censor. They are afraid of what they do not know. -Anonymous',
+
+  'Nature knows no indecencies; man invents them -Mark Twain',
+
+  'The only valid censorship of ideas is the right of people not to listen -Tommy Smothers',
+
+  'Think for yourselves and let others emjoy the priviledge to do so, too -Voltaire',
+]
+
+
+
+for(var i=0;i<quotes.length;i++){
+
+}
+
+var randNum = Math.round(Math.random() * quotes.length)
+
+$('#myQuote').html(quotes[randNum]);
+
+
+
+
+quotes.forEach(function(element, index){
+
+});
+
+
+
+
 var socket = io.connect('http://localhost:3100/')
 
 socket.on('connect', function(data){
@@ -5,10 +50,10 @@ console.log("connected to the server" + socket.id);
 })
 
 //FadeIn/Out Effects
-$('.Title').hide()
-$(".content").show()
-// $(".Title").delay(2000).fadeOut(2500);
-// $(".content").delay(2000).fadeIn(2500);
+
+$(".Title").delay(3500).fadeOut(2500);
+$(".content").delay(3500).fadeIn(2500);
+
 pixelateCLICK(0, '#kiss','images/1.jpg', 'images/a.jpg' )
 pixelateCLICK(1, '#cry','images/2.jpg', 'images/b.jpg' )
 pixelateCLICK(2, '#eat','images/3.jpg', 'images/c.jpg' )
@@ -94,7 +139,7 @@ function pixelateUPDATE(id, selector, source, pixelated){//Effects what is pushe
       }
     })
 }
-
+});
 
 
 

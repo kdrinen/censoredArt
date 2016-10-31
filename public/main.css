@@ -6,15 +6,21 @@ html, body{
 
 
 
-h1{color: #FF0000; text-align: center; margin: 20%; padding: 5%; font-family: 'Fredericka the Great', cursive; font-size: 100px; display: flex;
-  align-items: center;
-  justify-content: center 
+h1{color: #FF0000;  font-size: 100px;
 }
 
-.Title{
+#myQuote{color: #fff;
+  margin: 5px; padding: 0px;
+}
+
+.Title{text-align: center; font-family: 'Fredericka the Great', cursive; display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: #000000; height: 100%;
     width: 100%;
 }
+
 
 .content{
   display: none;
