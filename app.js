@@ -3,7 +3,7 @@ var app = express(); //use the express js framework to serve out html files (han
 var server = require('http').Server( app ) //start a server instance on a port
 var io = require('socket.io')(server) //use socket.io for real time connections aka. wesockets
 
-server.listen(3100, function(){ //set up a server on posrt 3000, do a callback when it started successfully
+server.listen(3100, function(){ //set up a server on port 3000, do a callback when it started successfully
   console.log("server started on 3100");
 })
 

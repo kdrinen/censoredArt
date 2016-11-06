@@ -1,4 +1,19 @@
+
+//drop down tab
+$(function() {
+    $('.tab').click(function() {
+        $(this).find('div').slideToggle();
+    });
+});
+
 $(function(){
+
+  // var socket = io.connect('http://150.253.89.109:3100')
+    var socket = io.connect('http://192.168.1.109:3100')
+
+  socket.on('connect', function(data){
+  console.log("connected to the server" + socket.id);
+  })
 
 //Quote at Random
   var quotes = [
@@ -24,7 +39,6 @@ $(function(){
 ]
 
 
-
 for(var i=0;i<quotes.length;i++){
 
 }
@@ -40,19 +54,11 @@ quotes.forEach(function(element, index){
 
 });
 
-
-
-
-var socket = io.connect('http://localhost:3100/')
-
-socket.on('connect', function(data){
-console.log("connected to the server" + socket.id);
-})
-
 //FadeIn/Out Effects
 
 $(".Title").delay(3500).fadeOut(2500);
 $(".content").delay(3500).fadeIn(2500);
+$(".tab").delay(3500).fadeIn(2500);
 
 pixelateCLICK(0, '#kiss','images/1.jpg', 'images/a.jpg' )
 pixelateCLICK(1, '#cry','images/2.jpg', 'images/b.jpg' )
