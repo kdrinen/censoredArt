@@ -9,7 +9,7 @@ $(function() {
 $(function(){
 
   // var socket = io.connect('http://150.253.89.109:3100')
-    var socket = io.connect('http://192.168.1.109:3100')
+    var socket = io.connect()
 
   socket.on('connect', function(data){
   console.log("connected to the server" + socket.id);
